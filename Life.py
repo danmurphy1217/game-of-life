@@ -1,5 +1,6 @@
 import random
 from colorama import Fore, Back
+
 class GameOfLife:
     def __init__(self, height, width):
         """
