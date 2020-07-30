@@ -21,7 +21,7 @@ class GameOfLife:
             border_width = len(board[0]) + 1
             border = Back.WHITE + Fore.GREEN + " - "*len(range(border_width)) + Back.RESET            
             print(border)
-            [print(Fore.GREEN + Back.WHITE + "|" + Back.RESET + "".join([Fore.GREEN  + " " + str(val)+ " " for val in board[i]]) + Back.WHITE + " |" + Back.RESET) for i in range(len(board))]
+            [print(Fore.GREEN + Back.WHITE + "|" + Back.RESET + "".join([Fore.GREEN  + " " + "#" + " " if val == 1 else " . " for val in board[i]]) + Back.WHITE + " |" + Back.RESET) for i in range(len(board))]
             print(border)
             
         return render(board)    
